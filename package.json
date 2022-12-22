@@ -7,9 +7,12 @@
     "start": "vite --host",
     "build": "vite build",
     "preview": "vite preview --host",
-    "clean": "rm -rf ./dist ./node_modules"
+    "clean": "rm -rf ./dist"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "reset-css": "^5.0.1"
+  }
 }
