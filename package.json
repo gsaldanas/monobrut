@@ -11,8 +11,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "reset-css": "^5.0.1"
-  }
+  "license": "ISC"
 }
