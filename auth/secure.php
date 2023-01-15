@@ -1,5 +1,5 @@
 <?php
-$pathLogin = "http://" . $_SERVER["HTTP_HOST"] . '/login.php';
+$pathLogin = "http://" . $_SERVER["HTTP_HOST"] . '/monobrut/login.php';
 if (!isset($_SESSION)) {
     session_start();
 }

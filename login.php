@@ -1,6 +1,6 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"] . '/shared/header_dev.php';
-include 'auth/secure_login.php';
+include $_SERVER["DOCUMENT_ROOT"] . '/monobrut/shared/header_dev.php';
+include('auth/secure_login.php');
 $errors["401"] = "wrong user credentials";
 $errors["418"] = "I'm a teapot.";
 
@@ -25,9 +25,9 @@ $errors["418"] = "I'm a teapot.";
         }
         ?>
         <form method="post" action="auth/auth.php">
-            <label for="fname">Username</label><br>
+            <label for="uname">Username</label><br>
             <input type="text" id="email" name="email" placeholder="your email" required><br>
-            <label for="lname">Password</label><br>
+            <label for="pwd">Password</label><br>
             <input type="password" id="pwd" name="pwd" placeholder="your password" required><br><br>
             <input type="submit" value="login">
         </form>

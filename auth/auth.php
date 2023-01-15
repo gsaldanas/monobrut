@@ -1,6 +1,6 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"] . '/shared/header_dev.php';
-include $_SERVER["DOCUMENT_ROOT"] . '/shared/config.php';
+include $_SERVER["DOCUMENT_ROOT"] . '/monobrut/shared/header_dev.php';
+include $_SERVER["DOCUMENT_ROOT"] . '/monobrut/shared/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo 'bad request method';
@@ -12,8 +12,8 @@ $password = filter_var($_POST["pwd"], FILTER_SANITIZE_SPECIAL_CHARS);
 
 //TODO check password empty?
 $email = strtolower($email);
-$pathAdmin = "http://" . $_SERVER["HTTP_HOST"] . '/admin/';
-$pathLogin = "http://" . $_SERVER["HTTP_HOST"] . '/login.php';
+$pathAdmin = "http://" . $_SERVER["HTTP_HOST"] . '/monobrut/admin/';
+$pathLogin = "http://" . $_SERVER["HTTP_HOST"] . '/monobrut/login.php';
 
 //errors
 $errors = "?error=401"; //wrong user credentials
@@ -42,6 +42,7 @@ if ($result && $num_rows > 0) {
     session_regenerate_id();
     $_SESSION["loggedin"] = TRUE;
     $_SESSION["email"] = $email;
+    $_SESSION["username"] = $user["username"];
     $_SESSION["id"] = $result["userid"];
 
     header("Location:" . $pathAdmin);
