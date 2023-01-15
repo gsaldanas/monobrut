@@ -1,6 +1,6 @@
 <?php
-include $_SERVER["DOCUMENT_ROOT"] . '/shared/header_dev.php';
-include $_SERVER["DOCUMENT_ROOT"] . '/auth/secure.php';
+include $_SERVER["DOCUMENT_ROOT"] . '/monobrut/shared/header_dev.php';
+include $_SERVER["DOCUMENT_ROOT"] . '/monobrut/auth/secure.php';
 
 ?>
 <!DOCTYPE html>
@@ -16,6 +16,20 @@ include $_SERVER["DOCUMENT_ROOT"] . '/auth/secure.php';
 <body>
     <h1>Welcome on the admin dashboard</h1>
     <a href="../auth/logout.php">logout</a>
+    <main>
+        <p>Welcome, <?php echo $_SESSION["username"]; ?></p>
+        <section>
+            <article>
+                <a href="buildings/index.php">Manage buildings</a>
+            </article>
+            <article>
+                <a href="categories/index.php">Manage Categories</a>
+            </article>
+            <article>
+                <a href="overview/index.php">Overview of the buildings</a>
+            </article>
+        </section>
+    </main>
 </body>
 
 </html>

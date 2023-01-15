@@ -1,5 +1,5 @@
 <?php
-$pathAdmin = "http://" . $_SERVER["HTTP_HOST"] . '/admin/';
+$pathAdmin = "http://" . $_SERVER["HTTP_HOST"] . '/monobrut/admin/';
 if (!isset($_SESSION)) {
     session_start();
 }
