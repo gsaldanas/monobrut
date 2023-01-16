@@ -31,6 +31,6 @@ echo '</pre>';
         <img src="http://<?= $_SERVER['HTTP_HOST'] ?>/monobrut/uploadFiles/<?= $building['base_img'] ?>">
         <p class="title"><?= $building['name'] ?></p>
         <p class="city"><?= $building['city'] ?></p>
-        <a href="#">Information</a>
+        <a href="#">About</a>
     </div>
 <?php } ?>

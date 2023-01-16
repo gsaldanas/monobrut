@@ -21,7 +21,7 @@ while ($row = $stmnt->fetch(PDO::FETCH_ASSOC)) {
         <img src="http://<?= $_SERVER['HTTP_HOST'] ?>/monobrut/uploadFiles/<?= $building['base_img'] ?>">
         <p class="title"><?= $building['name'] ?></p>
         <p class="city"><?= $building['city'] ?></p>
-        <a href="buildings/detail.php?id=<?= $building['idbuildings'] ?>">Information</a>
+        <a href="buildings/detail.php?id=<?= $building['idbuildings'] ?>">About</a>
 
     </div>
 <?php } ?>

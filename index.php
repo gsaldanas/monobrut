@@ -1,6 +1,6 @@
 <?php
 
-$title = "<h1>een <span>titel</span></h1>";
+//$title = "<h1>een <span>titel</span></h1>";
 //we requiren de json file. (bekijk hem eens. hij bevat de output van de door vite gegenereerde bestanden)
 $manifest = file_get_contents("./dist/manifest.json");
 //we lezen hem in als associatieve array
@@ -32,27 +32,27 @@ $continent = "All brutalistic buildings";
             <span class="name">Monobrut<span class="dot">.</span></span>
         </article>
         <nav>
-            <a class="links" href="#">Gallery</a>
-            <a class="links" href="#">About</a>
-            <a class="links" href="#">Contact</a>
+
+            <a class="links" href="login.php">login</a>
+
         </nav>
     </header>
     <main>
         <article class="hero-content">
 
             <h1>Concrete monsters<span class="yellow-dot">.</span></h1>
-            <h2>Discover buildings, and its brutality founded in the 1950s.</h2>
-            <a class="cta-btn" href="#">Discover</a>
+            <h2>Discover buildings from around the world, and its brutality founded in the 1950s.</h2>
+            <a class="cta-btn" href="#continents">Discover</a>
         </article>
     </main>
     <article class="gallery">
-        <h2>Brutalism in architecture</h2>
+        <h1 class="titles">Brutalism in architecture</h1>
         <section>
             <?php
 
             ?>
-            <aside class="_option">
-                <p>Filter+</p>
+            <aside class="filters">
+
                 <button><a href="index.php">All</a></button>
                 <button><a href=" index.php?code_cat=1&continent=North America">North America</a></button>
                 <button><a href=" index.php?code_cat=2&continent=Latin America">Latin America</a></button>
@@ -109,7 +109,7 @@ $continent = "All brutalistic buildings";
                         <img src="http://<?= $_SERVER['HTTP_HOST'] ?>/monobrut/uploadFiles/<?= $building['base_img'] ?>">
                         <p class="title"><?= $building['name'] ?></p>
                         <p class="city"><?= $building['city'] ?></p>
-                        <a href="buildings/detail.php?id=<?= $building['idbuildings'] ?>">Information</a>
+                        <a href="buildings/detail.php?id=<?= $building['idbuildings'] ?>">About</a>
                     </div>
                 <?php }
 
@@ -122,6 +122,9 @@ $continent = "All brutalistic buildings";
             ?>
         </section>
     </article>
+    <footer>
+        <p>Created by Brutalists Masters Gaspar & Mehdi<span class="dot">.</span></p>
+    </footer>
 </body>
 
 </html>
